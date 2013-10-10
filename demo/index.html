@@ -14,7 +14,7 @@
 
     <canvas w="{{ bmp.parsed.header.dib.width }}" h="{{ bmp.parsed.header.dib.height }}"
             lines="bmp.parsed.lines" channels="{{ bmp.parsed.header.dib.bits_per_pixel }}"
-            style="border:1px grey solid;" ng-show="{{ bmp.parsed.lines }}"></canvas>
+            style="border:1px grey solid;" ng-show="bmp.parsed.lines"></canvas>
 
     <script src="../lib/bitratchet-js/bitratchet-1.1.2-min.js"></script>
     <script src="../bmp.js"></script>
