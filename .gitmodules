@@ -1,0 +1,6 @@
+[submodule "demo/lib/angular-file-upload"]
+	path = demo/lib/angular-file-upload
+	url = https://github.com/danialfarid/angular-file-upload
+[submodule "lib/bitratchet-js"]
+	path = lib/bitratchet-js
+	url = https://github.com/kzar/bitratchet-js
