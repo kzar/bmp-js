@@ -21,4 +21,4 @@ Status
  - Started implementing demo, displays header but canvas rendering of actual pixels does not yet work.
 
 
- - Dave.
+Cheers, Dave.
