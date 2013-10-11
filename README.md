@@ -3,6 +3,11 @@ BMP-js
 
 Javascript parser for BMP files. Demo of [bitratchet.js](https://github.com/kzar/bitratchet-js) usage / an experiment to see how well bitratchet fares on large files.
 
+Demo
+----
+
+There's [a demo running on Plunkr here](http://plnkr.co/edit/y1Re1GCby0fVN4gkHaQo?p=info), check it out.
+
 Usage
 -----
 
