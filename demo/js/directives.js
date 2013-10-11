@@ -11,24 +11,21 @@
           var context = elm[0].getContext('2d');
           scope.$watch($parse(attrs.lines), function (lines) {
             var x, y, i, image_data,
-                width = parseInt(attrs.w),
-                height = parseInt(attrs.h),
+                width = parseInt(attrs.width),
+                height = parseInt(attrs.height),
                 channels = parseInt(attrs.channels) / 8;
             if (lines) {
-              console.log("DRAWING", width, height, channels, lines.length);
-              // Reset the canvas
-              elm[0].width = width;
-              elm[0].height = height;
               image_data = context.createImageData(width, height);
               // Draw our BMP
               for (y = 0; y < height; y +=1) {
                 for (x = 0; x < width; x +=1) {
                   for (i = 0; i < channels; i += 1) {
-                    image_data[(x + y * width) * 4 + i] = lines[y][x] >> (8 * i) & 0xff;
+                    image_data.data[(x + y * width) * 4 + i] = lines[height - 1 - y][x] >> (8 * i) & 0xff;
                   }
+                  // FIXME bodge alpha for now!
+                  image_data.data[(x + y * width) * 4 + 3] = 255;
                 }
               }
-              console.log(image_data);
               context.putImageData(image_data, 0, 0);
             }
           });

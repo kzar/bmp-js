@@ -12,7 +12,7 @@
 
     <pre>{{ bmp.parsed.header | json }}</pre>
 
-    <canvas w="{{ bmp.parsed.header.dib.width }}" h="{{ bmp.parsed.header.dib.height }}"
+    <canvas width="{{ bmp.parsed.header.dib.width }}" height="{{ bmp.parsed.header.dib.height }}"
             lines="bmp.parsed.lines" channels="{{ bmp.parsed.header.dib.bits_per_pixel }}"
             style="border:1px grey solid;" ng-show="bmp.parsed.lines"></canvas>
 

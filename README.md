@@ -18,7 +18,7 @@ Status
 ------
 
  - Basics of file spec have been implemented and appear to work.
- - Started implementing demo, displays header but canvas rendering of actual pixels does not yet work.
-
+ - Wrote demo that displays header as JSON and pixels on a HTML canvas.
+ - Things like alpha channel, non 24bit bits_per_pixel, compression, colour palettes, different dib versions have not been implemented.
 
 Cheers, Dave.
