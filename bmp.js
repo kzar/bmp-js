@@ -32,7 +32,7 @@ var bmp;
   bmp = bitratchet.record({
     header: bitratchet.record({
       file: bitratchet.record({
-        header: bitratchet.string({ length: 2 * 8, endian: 'little' }),
+        header: bitratchet.string({ length: 2 * 8 }),
         size: bitratchet.number({ length: 4 * 8, endian: 'little' }),
         reserved: bitratchet.skip({ length: 4 * 8 }),
         data_offset: bitratchet.number({ length: 4 * 8, endian: 'little' })
@@ -49,7 +49,7 @@ var bmp;
         horizontal_resolution: bitratchet.number({ length: 4 * 8, signed: true, endian: 'little' }),
         vertical_resolution: bitratchet.number({ length: 4 * 8, signed: true, endian: 'little' }),
         colors_in_palette: bitratchet.number({ length: 4 * 8, endian: 'little' }),
-        ignored: bitratchet.skip({ length: 4 * 8, endian: 'little' })
+        ignored: bitratchet.skip({ length: 4 * 8 })
       })
       // FIXME what about colour palette? (If <24 bits per pixel there should be one)
     }),
