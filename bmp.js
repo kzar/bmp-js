@@ -6,7 +6,7 @@ var bmp;
   "use strict";
 
   function line (options) {
-    var padding_length = 32 - (options.bits_per_pixel * options.width) % 32,
+    var padding_length = (32 - (options.bits_per_pixel * options.width) % 32) % 32,
         line_parts = bitratchet.record({
           pixels: bitratchet.array({
             size: options.width,
