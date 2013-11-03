@@ -19,6 +19,11 @@ Usage
 
 (For reference check out [the bitratchet.js documentation](https://github.com/kzar/bitratchet-js).)
 
+Tests
+-----
+
+Tests are a work in progress but to run them just type `karma start karma.conf.js`.
+
 Status
 ------
 
